@@ -1,0 +1,52 @@
+1) More than 4 lakh good and arounf 50k bad customers. IMBALANCED DATA
+2) Broken into test and train
+3) 'Term' varible converted to just numbers
+4) 'Emp_length' variable converted to just numbers, null replaced with 0
+5) 4 Null values in 'annual_inc',26 null in 'delinq_2yrs','months_since_ear_cr_line','delinq_2yrs','inq_last_6mths',
+    'open_acc'variable*
+6) Converted 'issue_d' to datetime, making a column 'months_since_issue_d' by subtracting it from 2017-12-01
+7) Converted 'earliest_cr_line' to datetime, making a column  'months_since_ear_cr_line' by subtracting it from 2017-12-01
+8) 'open_acc' might be containing outliers
+
+
+
+----- DISCRETE VARIABLES
+
+- GRADE: All classes separate: 'grade:A', 'grade:B', 'grade:C', 'grade:D', 'grade:E', 'grade:F', 'grade:G'
+Reference will be G
+
+- TERM: All classes separate: 'term:36', 'term:60'
+Reference will be 60
+
+- HOME OWNERSSHIP: ANY, OTHER, NONE, RENT to be combined into one: 'home_ownership:ANY', 'home_ownership:MORTGAGE',                                                      'home_ownership:NONE','home_ownership:OTHER', 'home_ownership:OWN', 'home_ownership:RENT'
+Reference will be RENT combined category
+
+- ADDR_STATE:
+NE, IA,NV into one<br>
+KS, MS, NH, VT, WV,DC,WY,ME into one<br>
+FL separate<br>
+AL,HI,LA,NM into one <br>
+NY separate<br>
+NC,MD,OK into one<br>
+CA separate<br>
+VA,NJ,MO,TN,UT,AZ,AR,DE,RI,KY,MI into one<br>
+OH,PA,MA,MN,IN,GA,WI,SD,WA,OR,MT into one <br>
+TX separate<br>
+IL,SC,CT,AK,CO,ID into one<br>
+
+
+       'addr_state:AK', 'addr_state:AL', 'addr_state:AR', 'addr_state:AZ',
+       'addr_state:CA', 'addr_state:CO', 'addr_state:CT', 'addr_state:DC',
+       'addr_state:DE', 'addr_state:FL', 'addr_state:GA', 'addr_state:HI',
+       'addr_state:IA', 'addr_state:ID', 'addr_state:IL', 'addr_state:IN',
+       'addr_state:KS', 'addr_state:KY', 'addr_state:LA', 'addr_state:MA',
+       'addr_state:MD', 'addr_state:ME', 'addr_state:MI', 'addr_state:MN',
+       'addr_state:MO', 'addr_state:MS', 'addr_state:MT', 'addr_state:NC',
+       'addr_state:NE', 'addr_state:NH', 'addr_state:NJ', 'addr_state:NM',
+       'addr_state:NV', 'addr_state:NY', 'addr_state:OH', 'addr_state:OK',
+       'addr_state:OR', 'addr_state:PA', 'addr_state:RI', 'addr_state:SC',
+       'addr_state:SD', 'addr_state:TN', 'addr_state:TX', 'addr_state:UT',
+       'addr_state:VA', 'addr_state:VT', 'addr_state:WA', 'addr_state:WI',
+       'addr_state:WV', 'addr_state:WY'
+  
+Reference will ne NE,IA,NV combined category
