@@ -10,7 +10,7 @@
 
 
 
------ DISCRETE VARIABLES
+------------------------------------------- DISCRETE VARIABLES -------------------------------------------
 
 - GRADE: All classes separate: 'grade:A', 'grade:B', 'grade:C', 'grade:D', 'grade:E', 'grade:F', 'grade:G'
 Reference will be G
@@ -50,3 +50,66 @@ IL,SC,CT,AK,CO,ID into one<br>
        'addr_state:WV', 'addr_state:WY'
   
 Reference will ne NE,IA,NV combined category
+
+- VERIFICATION_STATUS: All classes separate
+'verification_status:Not Verified',
+       'verification_status:Source Verified', 'verification_status:Verified'
+       
+Reference will be verification_status:Verified
+
+- PURPOSE: 
+small_business and educational together <br>
+renewable_energy, moving, house, other, medical together<br>
+wedding and vacation together <br>
+debt_consolidation alone<br>
+home_improvement, major_purchase and car together <br>
+credit_card separate
+
+'purpose:car', 'purpose:credit_card', 'purpose:debt_consolidation',
+       'purpose:educational', 'purpose:home_improvement', 'purpose:house',
+       'purpose:major_purchase', 'purpose:medical', 'purpose:moving',
+       'purpose:other', 'purpose:renewable_energy', 'purpose:small_business',
+       'purpose:vacation', 'purpose:wedding'
+
+small_business and educational category will be reference
+
+- INITIAL LIST STATUS
+'initial_list_status:f', 'initial_list_status:w'
+both categories will be separate
+
+Reference will be 'initial_list_status:f'
+
+----------------------------------------- CONTINOUS VARIABLES -------------------------------------------
+1) Emp_Length
+   0 separate
+   1,2,3,4 together
+   5,6 together
+   7,8,9 together
+   10 separate
+   
+   Reference will be 0
+
+2) Months Since Issue Date
+   <38,38-40,41,42-43,44-45,46-47,48,49-50,51-52,53-54,55-60,61-65,66-72,73-77,78-84,84+
+   Reference will be less than 38
+   
+3) Annual Income
+   <28000,28000-50000,50000-60000,60000-70000,70000-80000,80000-90000,90000-100000,100000-150000,150000+
+   Reference will be <28
+   
+4) Interest Rate
+   <7, 7-9, 9-10.3, 10.3-12, 12-14,14-16,16-19,19-23,23+
+   Reference will be <7
+
+5) DTI: Debt to income ratio
+   <1.6,1.6-4,4-4.8,4.8-8.8,8.8-13.6,13.6-16.8,16.8-20.8,20.8-26.4,26.4-34,34+
+   Reference will be 34+
+   
+6) Delinquency 2 years: Filled missing values by 0
+   <=1,2,3,4,4+
+   Reference will be 4 plus
+
+7) Months since earliest credit line: Replacing -ve values with max
+   <134,134-186,186-268,268-350,350-450,450-535,535+
+   Reference will be 535+
+    
